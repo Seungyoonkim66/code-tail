@@ -1,4 +1,4 @@
 export const USER_TYPE = Object.freeze({
-  STUDENT: 'student',
-  INSTRUCTOR: 'instructor',
+  STUDENT: '학생',
+  INSTRUCTOR: '선생님',
 });

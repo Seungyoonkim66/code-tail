@@ -16,17 +16,8 @@ export const useAuthStore = defineStore('auth', {
 
   },
   actions: {
-    async login(userId, userPw) {
-      // TODO: apis/auth.api.js에서 axois.js 활용해서 api 콜하는 함수만들어서 여기서 연동하면 됨 
-      // const [error, res] = await fetchLoginCheck(userId, userPw);
-      // if (!error) {
-      //   this.isAuth = res.data;
-      // }
+    authenticate() {
       this.isAuth = true;
-    },
-    logout() {
-      // TODO: 여기서도 로그아웃 api 콜 
-      this.isAuth= false;
-    },
+    }
   }
 })
