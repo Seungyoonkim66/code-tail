@@ -1,7 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router';
+import isAuth from './middlewares/isAuth';
 
 const routes = [
   {
+    beforeEnter: [isAuth],
     path: '',
     component: () => import('@/App.vue'),
     children: [
