@@ -21,6 +21,7 @@ async function login() {
   //   router.push({ name: 'main' });
   // }
   console.debug(form.id, form.pw);
+  authStore.authenticate();
   router.push({ name: 'main' });
 }
 

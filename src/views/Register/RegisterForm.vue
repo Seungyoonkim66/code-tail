@@ -30,11 +30,12 @@ const rules = reactive({
   ],
 });
 
+// TODO: 회원가입 api 연동 -> 완료되면 페이지 이동 
 async function submit(formEl) {
   if (!formEl) return
   await formEl.validate((valid, fields) => {
     if (valid) {
-      console.log('submit!')
+      console.log('submit:', form)
     } else {
       console.log('error submit!', fields)
     }

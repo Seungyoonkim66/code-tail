@@ -50,6 +50,7 @@ function goToBack() {
     display: flex;
     align-items: center;
     gap: 0.6rem;
+    margin-bottom: 1rem;
 
     & > span {
       font-weight: 100;
