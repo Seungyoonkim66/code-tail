@@ -3,8 +3,10 @@ import Logo from '@/components/Logo';
 import nav from '@/nav';
 import { useAuthStore } from '@/stores/auth.store';
 import { ArrowDown } from '@element-plus/icons-vue';
+import { useRoute } from 'vue-router';
 
 const authStore = useAuthStore();
+const route = useRoute();
 
 defineProps({
   height: {
@@ -50,6 +52,10 @@ function logout() {
           <el-button 
             type="info"
             text
+            :class="{
+              'the-header__link': true,
+              'the-header__link--active': item.to.name === route.name
+            }"
           >{{ item.name }}</el-button>
         </router-link>
       </span>
@@ -95,6 +101,12 @@ function logout() {
 
   &__user-info {
     line-height: 0;
+  }
+
+  &__link {
+    &--active {
+      color: var(--el-color-primary);
+    }
   }
 }
 </style>
