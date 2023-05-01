@@ -21,7 +21,32 @@ const routes = [
         path: 'main',
         name: 'main',
         component: () => import('@/layouts/BaseLayout.vue'),
-        children: [],
+        children: [
+          {
+            path: 'learning',
+            name: 'learning',
+            component: () => import('@/views/Learning'),
+          },
+          {
+            path: 'coding',
+            name: 'coding',
+            component: () => import('@/views/Coding'),
+          },
+          {
+            path: 'grading',
+            name: 'grading',
+            component: () => import('@/views/Grading'),
+          },
+          {
+            path: 'levelTest',
+            name: 'levelTest',
+            component: () => import('@/views/LevelTest'),
+          },
+          {
+            path: 'instructor',
+            name: 'instructor',
+            component: () => import('@/views/Instructor'),
+          },        ],
       }
     ]
   }
