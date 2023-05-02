@@ -34,9 +34,9 @@ function logout() {
     }"
   >
 
-    <a href="/" class="the-header__logo">
+    <router-link to="/" class="the-header__logo">
       <Logo />
-    </a>
+    </router-link>
 
     <div class="the-header__actions">
 

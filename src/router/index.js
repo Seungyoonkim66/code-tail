@@ -21,6 +21,7 @@ const routes = [
         path: '',
         name: 'main',
         component: () => import('@/layouts/BaseLayout.vue'),
+        redirect: { name: 'learning' },
         children: [
           {
             path: 'learning',

@@ -1,5 +1,6 @@
 <script setup>
 import { computed } from 'vue';
+import Card from '@/components/Card';
 
 const props = defineProps({
   percentage: {
@@ -11,32 +12,28 @@ const props = defineProps({
 const status = computed(() => {
   if (0 < props.percentage && props.percentage <= 30) return 'warning';
   if (props.percentage === 100) return 'success';
-  else return 'default';
+  else return '';
 });
 
 </script>
 
 <template>
 
-  <el-card>
-    <template #header>
-      진행 상태
-    </template>
+  <Card
+    title="진행 상태"
+    width="50%"
+  >
 
-    <div class="learning-status__content"> 
+    <el-progress 
+      type="dashboard" 
+      :percentage="percentage"
+      :status="status"
+    >
+      <template #default="{ percentage }">
+        <span>{{ percentage }}%</span>
+      </template>
+    </el-progress>
 
-      <el-progress 
-        type="dashboard" 
-        :percentage="percentage"
-        :status="status"
-      >
-        <template #default="{ percentage }">
-          <span>{{ percentage }}%</span>
-        </template>
-      </el-progress>
-
-    </div>
-
-  </el-card>
+  </Card>
 
 </template>

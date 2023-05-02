@@ -1,10 +1,11 @@
 <script setup>
+import Card from '@/components/Card';
 </script>
 
 <template>
-  <el-card>
+  <Card>
     학습지
-  </el-card>
+  </Card>
 </template>
 
 <style lang="scss" scoped>

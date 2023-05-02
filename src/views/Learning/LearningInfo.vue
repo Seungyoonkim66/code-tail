@@ -1,25 +1,16 @@
 <script setup>
+import Card from '@/components/Card';
 </script>
 
 <template>
-  <el-card class="learning-info">
-    <template #header>
-      학습 정보
-    </template>
-
-    <div class="learning-info__content">
+  <Card 
+    width="50%"
+    title="학습 정보"
+  >
+    <div>
       학습 제목 및 설명
     </div>
 
-  </el-card>
+  </Card>
 </template>
 
-<style lang="scss" scoped>
-.learning-info{
-  width: 20rem;
-  
-  &__content {
-    font-size: 0.9rem;
-  }
-}
-</style>

@@ -2,9 +2,10 @@
 </script>
 
 <template>
-  <div>
+  <div class="container">
     coding
   </div>
+  
 </template>
 
 <style lang="scss" scoped>
